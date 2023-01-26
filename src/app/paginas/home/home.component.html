@@ -1,0 +1,35 @@
+
+<div class="container">
+<div class="row m-5">
+    <div>
+    <h1>Registro Empresas</h1>
+    <button class="btn btn-dark" [routerLink]="['/agregar']">Agregar</button>
+   </div>
+   
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre Empresa</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of empresa">
+      <tr>
+       
+        <td>{{item.id}}</td>
+        <td>{{item.nombreempresa}}</td>
+        <td>{{item.direccion}}</td>
+        <td> <button class=" btn btn-primary" [routerLink]="['/detalle', item.id]">Detalle</button> 
+            <button class="btn btn-danger" (click)="eliminar(item.id)">Eliminar</button>
+            <button class="btn btn-success" [routerLink]="['/editar',item.id]" >Actualizar</button>
+        </td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+
+</div>

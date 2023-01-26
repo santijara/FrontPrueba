@@ -1,0 +1,28 @@
+
+<div class="containet">
+<div class="row m-5">
+    <h1>Editar registro</h1>
+<form [formGroup]="forma">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre empresa</label>
+      <input 
+      type="text"
+      formControlName="nombre"
+       class="form-control" 
+       id="exampleInputEmail1" 
+       aria-describedby="emailHelp">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Direccion</label>
+      <input 
+      type="text" 
+      formControlName="direccion"
+      class="form-control" 
+      id="exampleInputPassword1">
+    </div>
+   
+    <button type="submit" class="btn btn-primary" (click)="actualizar()">Actualizar</button>
+    <button class="btn btn-success" routerLink="/home">Volver</button>
+  </form>
+</div></div>
